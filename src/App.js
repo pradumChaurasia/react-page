@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import About from './Components/About';
+import Community from './Components/Community';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import Mentor from './Components/Mentor';
+import MentorDetails from './Components/MentorDetails';
+import Register from './Components/Register';
+import Testimonail from './Components/Testimonail';
+import { Routes, Route } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
+  const [selected,setSelected] =useState("");
+  const [selected1,setSelected1] =useState("");
+  const [selected2,setSelected2] =useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* <Home />
+      <About />
+      <Mentor />
+      
+      <Community />
+      <Testimonail /> */}
+      <Routes>
+        <Route path="/" element={<>
+          <Home/>
+          <About />
+          <Mentor />
+          <Community />
+          <Testimonail/>
+          <Footer />
+        </>  } />
+        <Route path='/mentor-details' element={<MentorDetails />} />
+        <Route path="/register" element={<Register selected={selected}  setSelected={setSelected}/>} />
+      </Routes>
+      
     </div>
   );
 }
