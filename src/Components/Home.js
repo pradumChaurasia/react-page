@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from './Navbar'
-import { FiArrowRight } from "react-icons/fi";
+
 import Rectangle from "../Assets/Rectangle.png"
 // import './Home.css';
 

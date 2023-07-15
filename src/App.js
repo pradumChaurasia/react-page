@@ -15,8 +15,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const [selected,setSelected] =useState("");
-  const [selected1,setSelected1] =useState("");
-  const [selected2,setSelected2] =useState("");
+  
   return (
     <div className="App">
 

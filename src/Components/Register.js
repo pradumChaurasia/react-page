@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Register.css';
 import Home from './Home';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
 import Footer from './Footer';
 import Replacer from '../Assets/Replacer.png';
 
